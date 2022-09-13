@@ -1,0 +1,27 @@
+<h1>Enter Your Details to Sign Up !</h1>
+<br>
+<h1>{{obj | json}}</h1>
+
+<div class="signUpForm">
+    <form [formGroup]="signUpForm">
+        <input type="text" formControlName="firstName" placeholder="Enter your first name">
+        <br><br>
+        <input type="text" formControlName="lastName" placeholder="Enter your last name">
+        <br><br>
+        <input type="text" formControlName="username" placeholder="Enter your username">
+        <br><br>
+        <input type="tel" formControlName="mobileNumber" placeholder="Enter your phone number">
+        <br><br>
+        <input type="city" formControlName="city" placeholder="Enter your city">
+        <br><br>
+        <input type="email" formControlName="email" placeholder="Enter your email">
+        <br><br>
+        <input type="number"  formControlName="age" placeholder="Your age">
+        <br><br>
+        <input type="password" formControlName="firstPassword" placeholder="Enter your password">
+        <br><br>
+        <input type="password" formControlName="secondPassword" placeholder="Re-enter your password">
+        <br><br>
+        <button type="submit" (click)="onSubmit()" [disabled]="!signUpForm.valid" >Submit</button>
+    </form>    
+</div>
